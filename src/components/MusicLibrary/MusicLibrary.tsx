@@ -1,10 +1,17 @@
+import { CleanData } from "src/App";
 import { MusicTile } from "../../components";
 
 import { MusicLibraryWrapper, MusicTileWrapper } from "./styles";
 
+interface MusicLibraryProps {
+  albumsData: CleanData[];
+  handleRemoveButtonClick: Function;
+}
+
 export const MusicLibrary = (props: any) => {
-  const { albumsData } = props;
-  console.log(albumsData);
+  const { albumsData, handleRemoveButtonClick } = props;
+ 
+
   return (
     <MusicLibraryWrapper>
       {albumsData.map((album: any, index: string) => {
@@ -15,6 +22,9 @@ export const MusicLibrary = (props: any) => {
               title={album.title}
               subtitle={album.artist}
               key={index}
+              index={index}
+              imageAlt={album.imageAlt}
+              handleRemoveButtonClick={handleRemoveButtonClick}
             />
           </MusicTileWrapper>
         );

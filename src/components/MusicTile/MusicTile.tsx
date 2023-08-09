@@ -13,16 +13,25 @@ export interface MusicTileProps {
   img: string;
   title: string;
   subtitle: string;
+  imageAlt: string;
+  index: string;
+  handleRemoveButtonClick: Function;
 }
 
 export const MusicTile = (props: MusicTileProps) => {
-  const { img, title, subtitle } = props;
+  const { img, title, subtitle, imageAlt, index, handleRemoveButtonClick } =
+    props;
+
   return (
     <Wrapper>
-      <RemoveButton>
+      <RemoveButton
+        onClick={() => {
+          handleRemoveButtonClick(index);
+        }}
+      >
         <img src={X_Icon} />
       </RemoveButton>
-      <ImgWrapper src={img} />
+      <ImgWrapper src={img} alt={imageAlt} />
       <TitlesWrapper>
         <Title title={title}>{title}</Title>
         <SubTitle title={subtitle}>{subtitle}</SubTitle>

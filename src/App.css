@@ -1,8 +1,8 @@
 .App {
   display: flex;
   background-color: #121212;
-  height: 100%;
-  }
+}
+
 
 .App-logo {
   height: 40vmin;

@@ -11,6 +11,7 @@ export const Wrapper = styled.div`
   border-radius: 15px;
   padding: 15px;
   background: #181818;
+  cursor: pointer;
 `;
 
 export const ImgWrapper = styled.img`
@@ -54,9 +55,10 @@ export const RemoveButton = styled.div`
   width: 25px;
   height: 25px;
   border: solid;
+  border-width: 0px;
   border-radius: 50px;
-  top: -15px;
-  right: -10px;
+  top: -10px;
+  right: -5px;
   z-index: 2;
   background-color: green;
   cursor: pointer;
