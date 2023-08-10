@@ -14,7 +14,6 @@ export const MusicLibraryWrapper = styled.div`
     grid-template-rows: repeat(4, minmax(0px, 1fr));
   }
   gap: 24px;
-
   padding: 75px 0px;
   margin: auto;
 `;

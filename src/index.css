@@ -10,7 +10,6 @@ body, #root {
   min-height: 100vh;
 }
 
-
 @media (min-width: 767px) {
   #root {
     height: 100vh;

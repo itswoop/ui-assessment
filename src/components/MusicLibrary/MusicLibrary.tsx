@@ -1,6 +1,5 @@
 import { CleanData } from "src/App";
-import { MusicTile } from "../../components";
-import Header from "./Header/Header";
+import { MusicTile, Header } from "../../components";
 
 import { MusicLibraryWrapper, MusicTileWrapper, Wrapper } from "./styles";
 
@@ -26,7 +25,7 @@ export const MusicLibrary = (props: MusicLibraryProps) => {
         handleSortByTitleClick={handleSortByTitleClick}
       />
       <MusicLibraryWrapper>
-        {albumsData.map((album: any, index: number) => {
+        {albumsData.map((album: CleanData, index: number) => {
           return (
             <MusicTileWrapper key={index}>
               <MusicTile

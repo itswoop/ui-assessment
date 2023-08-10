@@ -52,8 +52,10 @@ export const SubTitle = styled(Title)`
   color: lightgrey;
 `;
 
-export const RemoveButton = styled.div`
+export const RemoveButton = styled.button`
   display: flex;
+  justify-content: center;
+  align-items: normal;
   position: absolute;
   width: 25px;
   height: 25px;

@@ -5,7 +5,7 @@ interface HeaderProps {
   handleSortByArtistClick: Function;
 }
 
-const Header = (props: HeaderProps) => {
+export const Header = (props: HeaderProps) => {
   const { handleSortByArtistClick, handleSortByTitleClick } = props;
   return (
     <Wrapper>
@@ -26,5 +26,3 @@ const Header = (props: HeaderProps) => {
     </Wrapper>
   );
 };
-
-export default Header;
