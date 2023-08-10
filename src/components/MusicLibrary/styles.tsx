@@ -6,7 +6,7 @@ export const MusicLibraryWrapper = styled.div`
   grid-template-columns: repeat(2, minmax(0px, 1fr));
   grid-template-rows: repeat(2, minmax(0px, 1fr));
   @media (min-width: 767px) {
-    grid-template-columns: repeat(3, minmax(0px, 1fr));
+    grid-template-columns: repeat(4, minmax(0px, 1fr));
     grid-template-rows: repeat(4, minmax(0px, 1fr));
   }
   @media (min-width: 1024px) {

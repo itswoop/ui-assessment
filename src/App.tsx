@@ -33,6 +33,7 @@ const App = () => {
   const handleSortByArtistClick = () => {
     let newData = [...albumsData];
     newData.sort((a, b) => a.artist.localeCompare(b.artist));
+    console.log("howdy");
     setAlbumsData(newData);
   };
 
@@ -62,6 +63,8 @@ const App = () => {
       <MusicLibrary
         albumsData={albumsData}
         handleRemoveButtonClick={handleRemoveButtonClick}
+        handleSortByTitleClick={handleSortByTitleClick}
+        handleSortByArtistClick={handleSortByArtistClick}
       />
     </div>
   );

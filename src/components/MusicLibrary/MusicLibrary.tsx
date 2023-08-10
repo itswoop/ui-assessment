@@ -7,23 +7,32 @@ import { MusicLibraryWrapper, MusicTileWrapper, Wrapper } from "./styles";
 interface MusicLibraryProps {
   albumsData: CleanData[];
   handleRemoveButtonClick: Function;
+  handleSortByTitleClick: Function;
+  handleSortByArtistClick: Function;
 }
 
 export const MusicLibrary = (props: any) => {
-  const { albumsData, handleRemoveButtonClick } = props;
+  const {
+    albumsData,
+    handleRemoveButtonClick,
+    handleSortByArtistClick,
+    handleSortByTitleClick,
+  } = props;
 
   return (
     <Wrapper>
-      <Header />
+      <Header
+        handleSortByArtistClick={handleSortByArtistClick}
+        handleSortByTitleClick={handleSortByTitleClick}
+      />
       <MusicLibraryWrapper>
         {albumsData.map((album: any, index: string) => {
           return (
-            <MusicTileWrapper>
+            <MusicTileWrapper key={index}>
               <MusicTile
                 img={album.artworkUrl}
                 title={album.title}
                 subtitle={album.artist}
-                key={index}
                 index={index}
                 imageAlt={album.imageAlt}
                 handleRemoveButtonClick={handleRemoveButtonClick}

@@ -1,10 +1,28 @@
 import styled from "styled-components";
 
-const Header = () => {
+interface HeaderProps {
+  handleSortByTitleClick: Function;
+  handleSortByArtistClick: Function;
+}
+
+const Header = (props: HeaderProps) => {
+  const { handleSortByArtistClick, handleSortByTitleClick } = props;
   return (
     <Wrapper>
-      <FilterByArtist>Filter By Artist</FilterByArtist>
-      <FilterByTitle>Filter By Title</FilterByTitle>
+      <FilterByArtist
+        onClick={() => {
+          handleSortByArtistClick();
+        }}
+      >
+        Filter By Artist
+      </FilterByArtist>
+      <FilterByTitle
+        onClick={() => {
+          handleSortByTitleClick();
+        }}
+      >
+        Filter By Title
+      </FilterByTitle>
     </Wrapper>
   );
 };
