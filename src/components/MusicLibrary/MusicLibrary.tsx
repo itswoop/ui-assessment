@@ -1,6 +1,6 @@
 import { CleanData } from "src/App";
 import { MusicTile } from "../../components";
-import Header from "./Header";
+import Header from "./Header/Header";
 
 import { MusicLibraryWrapper, MusicTileWrapper, Wrapper } from "./styles";
 
@@ -11,7 +11,7 @@ interface MusicLibraryProps {
   handleSortByArtistClick: Function;
 }
 
-export const MusicLibrary = (props: any) => {
+export const MusicLibrary = (props: MusicLibraryProps) => {
   const {
     albumsData,
     handleRemoveButtonClick,
@@ -26,7 +26,7 @@ export const MusicLibrary = (props: any) => {
         handleSortByTitleClick={handleSortByTitleClick}
       />
       <MusicLibraryWrapper>
-        {albumsData.map((album: any, index: string) => {
+        {albumsData.map((album: any, index: number) => {
           return (
             <MusicTileWrapper key={index}>
               <MusicTile

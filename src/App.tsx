@@ -19,10 +19,9 @@ export interface CleanData {
 const App = () => {
   const [albumsData, setAlbumsData] = useState<CleanData[]>([]);
 
-  const handleRemoveButtonClick = (index: string) => {
-    let indexAsNum = parseInt(index);
+  const handleRemoveButtonClick = (index: number) => {
     let newArray = [...albumsData];
-    newArray.splice(indexAsNum, 1);
+    newArray.splice(index, 1);
     setAlbumsData(newArray);
   };
   const handleSortByTitleClick = () => {
