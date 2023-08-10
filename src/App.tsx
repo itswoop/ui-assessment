@@ -3,7 +3,6 @@ import "./App.css";
 import { MusicLibrary } from "./components";
 import data from "./fake-data/albums.json";
 
-
 export interface RawData {
   title: string;
   artist: string;
@@ -25,6 +24,16 @@ const App = () => {
     let newArray = [...albumsData];
     newArray.splice(indexAsNum, 1);
     setAlbumsData(newArray);
+  };
+  const handleSortByTitleClick = () => {
+    let newData = [...albumsData];
+    newData.sort((a, b) => a.title.localeCompare(b.title));
+    setAlbumsData(newData);
+  };
+  const handleSortByArtistClick = () => {
+    let newData = [...albumsData];
+    newData.sort((a, b) => a.artist.localeCompare(b.artist));
+    setAlbumsData(newData);
   };
 
   useEffect(() => {

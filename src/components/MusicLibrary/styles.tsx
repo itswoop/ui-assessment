@@ -22,3 +22,8 @@ export const MusicTileWrapper = styled.div`
   display: flex;
   margin: auto;
 `;
+
+export const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
