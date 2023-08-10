@@ -22,7 +22,7 @@ const App = () => {
 
   const handleRemoveButtonClick = (index: string) => {
     let indexAsNum = parseInt(index);
-    let newArray = albumsData;
+    let newArray = [...albumsData];
     newArray.splice(indexAsNum, 1);
     setAlbumsData(newArray);
   };
