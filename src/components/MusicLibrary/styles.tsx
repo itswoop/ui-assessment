@@ -4,16 +4,18 @@ export const MusicLibraryWrapper = styled.div`
   justify-content: center;
   align-items: center;
   grid-template-columns: repeat(2, minmax(0px, 1fr));
+  grid-template-rows: repeat(2, minmax(0px, 1fr));
   @media (min-width: 767px) {
     grid-template-columns: repeat(3, minmax(0px, 1fr));
+    grid-template-rows: repeat(4, minmax(0px, 1fr));
   }
   @media (min-width: 1024px) {
     grid-template-columns: repeat(5, minmax(0px, 1fr));
+    grid-template-rows: repeat(4, minmax(0px, 1fr));
   }
   gap: 24px;
-  width: fit-content;
-  height: fit-content;
-  padding: 20px;
+
+  padding: 75px 0px;
   margin: auto;
 `;
 export const MusicTileWrapper = styled.div`

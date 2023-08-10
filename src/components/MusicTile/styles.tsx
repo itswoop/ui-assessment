@@ -11,23 +11,26 @@ export const Wrapper = styled.div`
   border-radius: 15px;
   padding: 15px;
   background: #181818;
-  cursor: pointer;
 `;
 
 export const ImgWrapper = styled.img`
   width: 150px;
-  height: 150px;
   border-radius: 5px;
   object-fit: contain;
   filter: drop-shadow(0px 5px 5px #2b2b2b);
+  @media (min-width: 150px) {
+    width: 130px;
+  }
 `;
 
 export const TitlesWrapper = styled.div`
   display: flex;
   flex-direction: column;
   gap: 5px;
-  width: 156px;
-  height: 90px;
+  width: 126px;
+  @media (min-width: 796px) {
+    width: 156px;
+  }
 `;
 export const Title = styled.div`
   display: -webkit-box;

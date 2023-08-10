@@ -29,9 +29,9 @@ export const MusicTile = (props: MusicTileProps) => {
           handleRemoveButtonClick(index);
         }}
       >
-        <img src={X_Icon} />
+        <img src={X_Icon} draggable="false" />
       </RemoveButton>
-      <ImgWrapper src={img} alt={imageAlt} />
+      <ImgWrapper src={img} alt={imageAlt} draggable="false" />
       <TitlesWrapper>
         <Title title={title}>{title}</Title>
         <SubTitle title={subtitle}>{subtitle}</SubTitle>

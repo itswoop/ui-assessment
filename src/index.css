@@ -5,7 +5,9 @@ body, #root {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  width: 100vw;
+  box-sizing: border-box;
+  background-color: #121212;
+  min-height: 100vh;
 }
 
 
@@ -18,4 +20,8 @@ body, #root {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+* {
+  box-sizing: border-box;
 }
