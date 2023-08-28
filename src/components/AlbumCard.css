@@ -10,8 +10,10 @@
 
   background-color: white;
   color: black;
-  display: flex;
+}
 
+.album-content {
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -30,4 +32,24 @@
 .album-artist {
   color: grey;
   font-size: 14px;
+}
+
+.delete-button {
+  width: 20px;
+  height: 20px;
+
+  /* margin-top: card padding - 10px */
+  margin-top: -25px;
+  /* margin-left: card size + 5px */
+  margin-left: 180px;
+  position: fixed;
+
+  border-radius: 100px;
+  border: gray solid 3px;
+
+  background-color: white;
+  color: grey;
+  font-weight: 700;
+
+  cursor: pointer;
 }

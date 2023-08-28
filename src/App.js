@@ -17,7 +17,7 @@ function App() {
   return (
     <div className='App'>
       <div>
-        <h2>Your Music</h2>
+        <h2>&#127925; Your Music &#127925;</h2>
       </div>
       <div className='card-container'>{albumCardList}</div>
     </div>
