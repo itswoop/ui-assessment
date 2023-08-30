@@ -1,0 +1,11 @@
+.library-display {
+  width: 90%;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+}
