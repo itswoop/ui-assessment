@@ -1,6 +1,7 @@
 import _ from "lodash";
 import { useState } from "react";
 
+import "./LibraryDisplay.css";
 import AlbumCard from "./AlbumCard";
 import initialAlbums from "../albums.json";
 
@@ -26,15 +27,20 @@ export default function LibraryDisplay() {
 
   return (
     <div className='library-display'>
-      <div>
-        <span
+      <div className='sort-container'>
+        <div
+          className='sort-direction-toggle'
           onClick={() =>
             setSortDirection(sortDirection === "asc" ? "desc" : "asc")
           }
         >
           {sortDirection === "asc" ? "\u2191" : "\u2193"}
-        </span>
-        <select value={sortKey} onChange={e => setSortKey(e.target.value)}>
+        </div>
+        <select
+          className='sort-key-select'
+          value={sortKey}
+          onChange={e => setSortKey(e.target.value)}
+        >
           <option value='initialIndex'>Default</option>
           <option value='title'>Album Title</option>
           <option value='artist'>Artist</option>
