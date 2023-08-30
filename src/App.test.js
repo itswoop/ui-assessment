@@ -1,10 +1,10 @@
-// TODO: rewrite for custom app
-
+import "@testing-library/jest-dom";
 import { render, screen } from "@testing-library/react";
+
 import App from "./App";
 
-test("renders learn react link", () => {
+test("renders your music title", () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
+  const linkElement = screen.getByText(/your music/i);
   expect(linkElement).toBeInTheDocument();
 });
