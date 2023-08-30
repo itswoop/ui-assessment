@@ -21,18 +21,27 @@ export default function LibraryDisplay() {
     setAlbums(updatedAlbums);
   }
 
-  const albumCardList = _.orderBy(albums, [sortKey], [sortDirection]).map(
+  function toggleSortDirection() {
+    if (isEmpty) return;
+    setSortDirection(sortDirection === "asc" ? "desc" : "asc");
+  }
+
+  let albumCardList = _.orderBy(albums, [sortKey], [sortDirection]).map(
     (album, i) => <AlbumCard key={i} albumData={album} onDelete={deleteAlbum} />
   );
+
+  const isEmpty = !albumCardList.length;
+
+  if (isEmpty) {
+    albumCardList = <div>There are no albums in your library :(</div>;
+  }
 
   return (
     <div className='library-display'>
       <div className='sort-container'>
         <div
-          className='sort-direction-toggle'
-          onClick={() =>
-            setSortDirection(sortDirection === "asc" ? "desc" : "asc")
-          }
+          className={"sort-direction-toggle" + (isEmpty ? " disabled" : "")}
+          onClick={toggleSortDirection}
         >
           {sortDirection === "asc" ? "\u2191" : "\u2193"}
         </div>
@@ -40,6 +49,7 @@ export default function LibraryDisplay() {
           className='sort-key-select'
           value={sortKey}
           onChange={e => setSortKey(e.target.value)}
+          disabled={isEmpty}
         >
           <option value='initialIndex'>Default</option>
           <option value='title'>Album Title</option>
