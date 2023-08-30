@@ -6,7 +6,6 @@ import AlbumCard from "./components/AlbumCard";
 import initialAlbums from "./albums.json";
 
 function LibraryDisplay() {
-  console.log("render");
   initialAlbums.forEach(
     album =>
       (album.id = `${_.kebabCase(album.artist)}:${_.kebabCase(album.title)}`)
