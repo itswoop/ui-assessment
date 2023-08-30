@@ -13,10 +13,19 @@
   cursor: pointer;
 }
 
+.sort-direction-toggle.disabled {
+  cursor: not-allowed;
+  color: gray;
+}
+
 .sort-key-select {
   cursor: pointer;
   border-radius: 5px;
   padding: 5px;
+}
+
+.sort-key-select:disabled {
+  cursor: not-allowed;
 }
 
 .card-container {
@@ -24,5 +33,5 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  align-content: center;
+  align-content: flex-start;
 }

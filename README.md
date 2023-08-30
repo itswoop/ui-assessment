@@ -16,4 +16,16 @@ To open the interactive test runner, run `npm test` in the project directory
 
 ## About
 
+### Decisions
+
+**Changes are Transient**
+
+Since this is just a simple react-based app, I decided to not worry about writing back to a file backup. So, upon refreshing the page, all deleted albums are restored.
+
+**Why React?**
+
+I've never built an app in react before, so I thought this would be a good chance to learn the basics of the framework.
+
+### Bootstrap
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
