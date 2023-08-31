@@ -1,6 +1,8 @@
 import "./AlbumCard.css";
 
+// a single card that displays album info
 export default function AlbumCard(props) {
+  // just get the filename from url
   const coverAlt = props.albumData.artworkUrl.split("/").pop();
   return (
     <div className='album-card'>
